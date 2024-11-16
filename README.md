@@ -115,6 +115,8 @@ MySQL Installation:
      
 
 Django (EC2):
+    ![image](https://github.com/user-attachments/assets/02665ea3-fb51-4f4c-a053-f1840ca4e631)
+
 
     sudo apt update && sudo apt upgrade -y
     sudo apt install pkg-config libmysqlclient-dev -y
