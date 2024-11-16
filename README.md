@@ -114,7 +114,7 @@ MySQL Installation:
     show databases;
      
 
-Django: EC2
+Django (EC2):
 
    sudo apt update && sudo apt upgrade -y
    sudo apt install pkg-config libmysqlclient-dev -y
