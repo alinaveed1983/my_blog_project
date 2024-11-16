@@ -69,3 +69,48 @@ Deployment Steps:
      3. Update Django’s settings.py to connect to the MySQL database on EC2 Instance 2.
 
 
+MySQL Installation:
+    # Step 1: Update the System
+    sudo apt update && sudo apt upgrade -y
+    # Step 2: Install Prerequisites (Alien and libaio1)
+    sudo apt install alien  libaio-dev -y
+    # Step 3: Download MySQL 8.0 RPM Package
+    wget https://repo.mysql.com//mysql80-community-release-el8-1.noarch.rpm
+    # Step 4: Convert the RPM Package to DEB Format
+    sudo alien -d mysql80-community-release-el8-1.noarch.rpm
+    # Step 5: Install the Converted DEB Package
+    sudo dpkg -i mysql80-community-release_0el8-2_all.deb
+    # Step 6: Install MySQL Server
+    sudo apt update
+    sudo apt install mysql-server -y
+    # Step 7: Start MySQL Service
+    sudo systemctl enable mysql
+    sudo systemctl start mysql
+    sudo systemctl status mysql
+    # Step 8: Find the Temporary Root Password
+    cat /var/log/mysql/error.log
+    [Warning] [MY-010453] [Server] root@localhost is created with an empty password! Please consider switching off the --initialize-insecure option.
+    # Step 9: Log in to MySQL with the Temporary Password
+    sudo mysql -u root
+    # Step 10: Change the Root Password (Inside MySQL Shell)
+    CREATE USER 'root'@'%' IDENTIFIED BY 'root@1234';
+    GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+    FLUSH PRIVILEGES;
+    # Edit MySQL Configuration File to Allow Remote Access
+    sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+    # Comment out the bind-address line:
+    # bind-address = 127.0.0.1
+    # Restart MySQL Service
+    sudo systemctl restart mysql
+    # Optional Step 2: Configure Firewall to Allow MySQL Traffic
+    sudo ufw allow 3306
+    sudo ufw reload
+    # Verify MySQL Status Again
+    sudo systemctl status mysql
+    # Create database "my_blog_db" for the project
+    sudo mysql -u root -p
+    create database my_blog_db;
+    show databases;
+     
+
+
