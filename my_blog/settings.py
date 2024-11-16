@@ -10,7 +10,8 @@ SECRET_KEY = 'your-secret-key-here'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'your-django-ec2-public-ip', '172.31.17.191']
+# Enter Public IP of django EC2 and then Private IP of MySQL EC2
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '44.223.52.232', '172.31.17.191']
 
 # Application definition
 INSTALLED_APPS = [
