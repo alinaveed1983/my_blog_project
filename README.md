@@ -125,6 +125,7 @@ Django (EC2):
     python3 -m venv venv
     source venv/bin/activate
     (venv) pip install django mysqlclient gunicorn
+    
     #Test MySQL Client Connection
     (venv) python
     import MySQLdb
@@ -142,11 +143,13 @@ Django (EC2):
         print(f"Connection failed: {e}")
       
     nc -zv 172.31.24.50 3306
+    
     # Apply Migrations and Collect Static Files
     (venv) python manage.py check
     (venv) python manage.py makemigrations blog_app
     (venv) python manage.py migrate
     (venv) python manage.py collectstatic
+    
     # Test the Django Application
     (venv) python manage.py runserver 0.0.0.0:8000
     http://44.223.52.232:8000
