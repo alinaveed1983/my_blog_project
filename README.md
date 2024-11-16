@@ -26,21 +26,9 @@ Technologies to Use
     Front-End: HTML, CSS, JavaScript (Bootstrap for styling, optional)
     Tools: Django Template Engine for rendering HTML
 
+![image](https://github.com/user-attachments/assets/0b387645-ff0e-4418-9c71-b0de28cbc892)
 
-my_blog_project/
-├── my_blog/
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── blog_app/
-│   ├── models.py
-│   ├── views.py
-│   ├── templates/
-│   │   ├── home.html
-│   │   └── post_detail.html
-│   └── static/
-│       └── style.css
-├── manage.py
+
 
 
 
