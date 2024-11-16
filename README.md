@@ -20,11 +20,14 @@ Blog Post Page: Displays the content of a single blog post.
 Admin Page: Allows the admin user to create, edit, or delete blog posts.
 Contact Page: A simple form for users to send messages.
 
+
 Technologies to Use
+
     Back-End: Python, Django
     Database: MySQL
     Front-End: HTML, CSS, JavaScript (Bootstrap for styling, optional)
     Tools: Django Template Engine for rendering HTML
+
 
 ![image](https://github.com/user-attachments/assets/0b387645-ff0e-4418-9c71-b0de28cbc892)
 
