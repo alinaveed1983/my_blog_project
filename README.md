@@ -1,13 +1,15 @@
 
 Here's a straightforward project idea that covers both front-end and back-end development, suitable for beginners learning full stack development using Django (Python) for the back end, MySQL for the database, and a simple HTML/CSS/JavaScript front end.
 
-Project Idea: Personal Blog Website
+
+Project: Personal Blog Website
 Description: Create a basic blogging platform where users can:
 
-View a list of blog posts.
-Read individual blog posts.
-Create, edit, and delete blog posts (admin feature).
-This project will give you hands-on experience with:
+
+ 1. View a list of blog posts.
+ 2. Read individual blog posts.
+ 3. Create, edit, and delete blog posts (admin feature).
+ 4. This project will give you hands-on experience with:
 
 
 Front-end development (HTML/CSS/JavaScript).
