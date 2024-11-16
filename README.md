@@ -50,12 +50,12 @@ Basic Production Setup (2 EC2 Instances)
 
 Deployment Steps:
     EC2 Instance 1:
-    Install Django, Gunicorn, and Nginx.
-    Set up the Django application.
+     1. Install Django, Gunicorn, and Nginx.
+     2. Set up the Django application.
 
     EC2 Instance 2:
-    Install MySQL and configure the database.
-    Allow remote access from the application server (update MySQL settings and security group).
-    Update Django’s settings.py to connect to the MySQL database on EC2 Instance 2.
+     1. Install MySQL and configure the database.
+     2. Allow remote access from the application server (update MySQL settings and security group).
+     3. Update Django’s settings.py to connect to the MySQL database on EC2 Instance 2.
 
 
