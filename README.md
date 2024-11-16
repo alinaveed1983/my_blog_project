@@ -32,7 +32,9 @@ Technologies to Use
 
 
 
+
 Basic Production Setup (2 EC2 Instances)
+
     Components:
     EC2 Instance 1: Hosts the Django application.
     EC2 Instance 2: Hosts the MySQL database.
@@ -47,6 +49,8 @@ Basic Production Setup (2 EC2 Instances)
     Recommended EC2 Instance Types:
     Application Server: t2.micro or t3.micro (for small projects).
     Database Server: t2.micro or t3.micro.
+
+
 
 Deployment Steps:
     
