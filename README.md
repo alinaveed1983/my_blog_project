@@ -114,4 +114,49 @@ MySQL Installation:
     show databases;
      
 
+Django: EC2
+
+   sudo apt update && sudo apt upgrade -y
+   sudo apt install pkg-config libmysqlclient-dev -y
+   sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools python3-venv nginx -y
+   
+   mkdir ~/my_blog_project
+   cd ~/my_blog_project
+   git clone https://github.com/alinaveed1983/my_blog_project.git .
+   
+   python3 -m venv venv
+   source venv/bin/activate
+   
+   (venv) pip install django mysqlclient gunicorn
+   
+   Test MySQL Client Connection
+   (venv) python
+   import MySQLdb
+   
+   try:
+       conn = MySQLdb.connect(
+           host="172.31.24.50",
+           user="root",
+           password="root@1234",
+           database="my_blog_db",
+           connect_timeout=10
+       )
+       print("Connection successful!")
+       conn.close()
+   except Exception as e:
+       print(f"Connection failed: {e}")
+   
+   
+   nc -zv 172.31.24.50 3306
+   
+   # Apply Migrations and Collect Static Files
+   (venv) python manage.py check
+   (venv) python manage.py makemigrations blog_app
+   (venv) python manage.py migrate
+   (venv) python manage.py collectstatic
+   
+   
+   # Test the Django Application
+   (venv) python manage.py runserver 0.0.0.0:8000
+   http://44.223.52.232:8000
 
