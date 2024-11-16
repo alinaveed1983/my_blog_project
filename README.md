@@ -49,6 +49,7 @@ Basic Production Setup (2 EC2 Instances)
     Database Server: t2.micro or t3.micro.
 
 Deployment Steps:
+    
     EC2 Instance 1:
      1. Install Django, Gunicorn, and Nginx.
      2. Set up the Django application.
