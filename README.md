@@ -152,5 +152,7 @@ Django (EC2):
     
     # Test the Django Application
     (venv) python manage.py runserver 0.0.0.0:8000
+
+    # Execute in browser
     http://44.223.52.232:8000
 
