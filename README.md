@@ -70,6 +70,8 @@ Deployment Steps:
 
 
 MySQL Installation:
+    ![image](https://github.com/user-attachments/assets/53c6b4c1-50f2-4660-bc9c-571dab3f372e)
+
 
     # Step 1: Update the System
     sudo apt update && sudo apt upgrade -y
