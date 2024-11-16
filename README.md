@@ -70,6 +70,7 @@ Deployment Steps:
 
 
 MySQL Installation:
+
     # Step 1: Update the System
     sudo apt update && sudo apt upgrade -y
     # Step 2: Install Prerequisites (Alien and libaio1)
