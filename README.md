@@ -31,7 +31,8 @@ Technologies to Use
     Tools: Django Template Engine for rendering HTML
 
 
-![image](https://github.com/user-attachments/assets/0b387645-ff0e-4418-9c71-b0de28cbc892)
+![image](https://github.com/user-attachments/assets/ff7e19b3-925e-41b5-94b3-7f3fa3d8808a)
+
 
 
 
