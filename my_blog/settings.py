@@ -11,7 +11,7 @@ SECRET_KEY = 'your-secret-key-here'
 DEBUG = True
 
 # Enter Public IP and then Private IP of django EC2
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '44.223.52.232', '172.31.17.191']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'ec2-184-72-129-63.compute-1.amazonaws.com', '172.31.17.191']
 
 # Application definition
 INSTALLED_APPS = [
@@ -68,6 +68,14 @@ DATABASES = {
         },
     }
 }
+
+# Enforce HTTPS
+SECURE_SSL_REDIRECT = False  # Redirect all HTTP requests to HTTPS
+SESSION_COOKIE_SECURE = True  # Secure session cookies
+CSRF_COOKIE_SECURE = True  # Secure CSRF cookies
+SECURE_HSTS_SECONDS = 31536000  # Enable HTTP Strict Transport Security (HSTS) for 1 year
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
