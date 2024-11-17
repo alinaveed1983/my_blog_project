@@ -163,3 +163,7 @@ Django (EC2):
     # Execute in browser
     http://44.223.52.232:8000
 
+    # Admin Access
+    http://44.223.52.232:8000/admin
+
+
