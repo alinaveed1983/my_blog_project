@@ -154,6 +154,8 @@ Django (EC2):
     (venv) python manage.py makemigrations blog_app
     (venv) python manage.py migrate
     (venv) python manage.py collectstatic
+    (venv) python manage.py createsuperuser
+
     
     # Test the Django Application
     (venv) python manage.py runserver 0.0.0.0:8000
