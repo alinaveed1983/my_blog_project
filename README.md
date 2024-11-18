@@ -123,7 +123,7 @@ Django (EC2):
 
     sudo apt update && sudo apt upgrade -y
     sudo apt install pkg-config libmysqlclient-dev -y
-    sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools python3-venv nginx -y
+    sudo apt install python3-pip python3-dev build-essential libssl-dev libffi-dev python3-setuptools python3-venv nginx net-tools -y
     mkdir ~/my_blog_project
     cd ~/my_blog_project
     git clone https://github.com/alinaveed1983/my_blog_project.git .
