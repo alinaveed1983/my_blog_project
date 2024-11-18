@@ -146,8 +146,28 @@ Django (EC2):
         conn.close()
     except Exception as e:
         print(f"Connection failed: {e}")
-      
-    nc -zv 172.31.24.50 3306
+
+    # Configure gunicorn  
+    sudo vi /etc/systemd/system/gunicorn.service
+    [Unit]
+    Description=Gunicorn daemon for Django project
+    After=network.target
+
+    [Service]
+    User=ubuntu
+    Group=www-data
+    WorkingDirectory=/home/ubuntu/my_blog_project
+    ExecStart=/home/ubuntu/my_blog_project/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/my_blog_project/my_blog.sock my_blog.wsgi:application
+    UMask=0007
+    RuntimeDirectoryMode=0755
+
+    [Install]
+    WantedBy=multi-user.target
+
+    sudo systemctl daemon-reload
+    sudo systemctl start gunicorn
+    sudo systemctl enable gunicorn
+    sudo systemctl status gunicorn
     
     # Apply Migrations and Collect Static Files
     (venv) python manage.py check
