@@ -213,6 +213,7 @@ Django (EC2):
 
     # Execute in browser
     http://44.223.52.232:8000
+    https://ec2-54-166-237-50.compute-1.amazonaws.com
 
     # Admin Access
     http://44.223.52.232:8000/admin
