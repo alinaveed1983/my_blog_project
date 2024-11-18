@@ -171,7 +171,25 @@ Django (EC2):
 
     # Configure Nginx
     sudo vi /etc/nginx/sites-available/my_blog
+    server {
+			     listen 443 ssl;
+			     server_name ec2-54-166-237-50.compute-1.amazonaws.com;
 
+			     ssl_certificate /etc/ssl/certs/nginx-selfsigned.crt;
+			     ssl_certificate_key /etc/ssl/private/nginx-selfsigned.key;
+
+		     location / {
+			     proxy_pass http://127.0.0.1:8001;
+			     proxy_set_header Host $host;
+			     proxy_set_header X-Real-IP $remote_addr;
+			     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+			     proxy_set_header X-Forwarded-Proto $scheme;
+		   }
+
+			     location /static/ {
+				        alias /home/ubuntu/my_blog_project/static/;
+			     }
+		    }
 
 
     sudo rm /etc/nginx/sites-enabled/default
