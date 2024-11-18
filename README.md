@@ -174,15 +174,12 @@ Django (EC2):
 
 
 
+    sudo rm /etc/nginx/sites-enabled/default
+    sudo ln -s /etc/nginx/sites-available/my_blog /etc/nginx/sites-enabled/
     sudo nginx -t
     sudo systemctl restart nginx
-
-   sudo rm /etc/nginx/sites-enabled/default
-   sudo ln -s /etc/nginx/sites-available/my_blog /etc/nginx/sites-enabled/
-   sudo nginx -t
-   sudo systemctl restart nginx
-   sudo ss -tuln | grep 443
-   sudo netstat -tuln | grep 443
+    sudo ss -tuln | grep 443
+    sudo netstat -tuln | grep 443
 
     
     # Apply Migrations and Collect Static Files
