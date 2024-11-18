@@ -157,9 +157,9 @@ Django (EC2):
     User=ubuntu
     Group=www-data
     WorkingDirectory=/home/ubuntu/my_blog_project
-    ExecStart=/home/ubuntu/my_blog_project/venv/bin/gunicorn --access-logfile - --workers 3 --bind unix:/home/ubuntu/my_blog_project/my_blog.sock my_blog.wsgi:application
+    ExecStart=/home/ubuntu/my_blog_project/venv/bin/gunicorn --access-logfile - --workers 3 --bind 127.0.0.1:8001 my_blog.wsgi:application
     UMask=0007
-    RuntimeDirectoryMode=0755
+    
 
     [Install]
     WantedBy=multi-user.target
