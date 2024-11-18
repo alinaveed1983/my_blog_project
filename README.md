@@ -101,7 +101,7 @@ MySQL Installation:
     GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
     FLUSH PRIVILEGES;
     # Edit MySQL Configuration File to Allow Remote Access
-    sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+    sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
     # Comment out the bind-address line:
     # bind-address = 127.0.0.1
     # Restart MySQL Service
