@@ -169,6 +169,9 @@ Django (EC2):
     sudo systemctl enable gunicorn
     sudo systemctl status gunicorn
 
+    # Generate a Self-Signed Certificate [ test/dev environments ]:
+    sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
+    
     # Configure Nginx
     sudo vi /etc/nginx/sites-available/my_blog
     server {
