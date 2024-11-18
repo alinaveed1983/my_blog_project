@@ -210,6 +210,8 @@ Django (EC2):
     (venv) python manage.py collectstatic
     (venv) python manage.py createsuperuser
 
+    # Test the transfer data from or to a server using HTTPs
+    curl -I -k https://ec2-184-72-129-63.compute-1.amazonaws.com
     
     # Test the Django Application
     (venv) python manage.py runserver 0.0.0.0:8000
