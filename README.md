@@ -136,7 +136,7 @@ Django (EC2):
     import MySQLdb
     try:
         conn = MySQLdb.connect(
-            host="172.31.24.50",
+            host="172.31.38.173",
             user="root",
             password="root@1234",
             database="my_blog_db",
